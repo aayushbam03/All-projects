@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - BookStore</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<style>
+    /* Internal CSS */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    html{
+        scroll-behavior: smooth;            /* Scrolling Smooth */
+    }
+
+    a{
+        text-decoration: none;
+    }
+</style>
+<body>
+    <!-- Header -->
+    <section id="top"></section>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Book<span>Store</span></a>
+        <div class="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="cart-btn btn" id="showcart-btn">
+            Cart
+        </button>
+    </nav>
+
+    <div id="cart" class="cart-popup hide">         <!-- Inline CSS -->
+        <div class="cart-popup-content">
+            <div class="cart-popup-header">
+                <h3>Cart</h3>
+                <button class="btn" id="cart-close" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-popup-body">
+                <div class="cart-popup-body-content">
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/kafka on the shore.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>Kafka on the shore</h4>
+                            <p>$5.00</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/norwegian wood.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>Norwegian wood</h4>
+                            <p>$4.00</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Main -->
+        <!-- Hero Banner Image -->
+        <div class="hero-banner" style="background-image: url('./assets/img/misc/hero-image.jpg');">
+            <div class="hero-banner-content">
+                <h1>Welcome to Book<span>Store</span></h1>
+                <p>Welcome to our book store,here you can find bestsellers, new & future releases, the choices are exhaustive when you shop online </p>
+                <button class="btn" type="button">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span><a href="./products.html" style="color: black;">Shop Now</a></span>
+                </button>
+            </div>
+        </div>
+    <!-- Main End -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; BookStore 2022</p>
+            </div>
+            <!-- Internal Linking -->
+            <div class="gototop"><a href="#top"><div class="btn">Go To Top</div></a></div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+        /* Internal JS */
+
+        // Cart Element
+        const cart = document.getElementById("cart");
+        const cartOpen = document.getElementById("showcart-btn");
+        const cartClose = document.getElementById("cart-close");
+        // Cart Open
+        function showcart() {
+            cart.classList.remove("hide");
+        }
+        cartOpen.addEventListener("click", showcart);
+
+        // Cart Close
+        function closecart() {
+            cart.classList.add("hide");
+        }
+        cartClose.addEventListener("click", closecart);
+    </script>
+</body>
+</html>

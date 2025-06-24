@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - BookStore</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<style>
+    /* Internal CSS */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    html{
+        scroll-behavior: smooth;            /* Scrolling Smooth */
+    }
+
+    a{
+        text-decoration: none;
+    }
+</style>
+<body>
+    <!-- Header -->
+    <section id="top"></section>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Book<span>Store</span></a>
+        <div class="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link " href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./products.html">products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="cart-btn btn" id="showcart-btn">
+            Cart
+        </button>
+    </nav>
+
+    <div id="cart" class="cart-popup hide">         <!-- Inline CSS -->
+        <div class="cart-popup-content">
+            <div class="cart-popup-header">
+                <h3>Cart</h3>
+                <button class="btn" id="cart-close" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-popup-body">
+                <div class="cart-popup-body-content">
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/kafka on the shore.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>kafka on the shore</h4>
+                            <p>$5.00</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/norwegian wood.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>Norwegian wood</h4>
+                            <p>$4.00</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Main -->
+    <main>
+        <!-- // Page Container-->
+        <div class="page-container">
+            <!-- Single Blog Post -->
+            <div class="single-blog-post">
+                <h2>Impact of Books
+                </h2>
+                <div class="blog-subtitle">
+                    <div class="blog-date">
+                        <p>Published at Oct 4, 2022</p>
+                    </div>                
+                    <div class="blog-author">
+                        <p>By <span>Admin</span></p>
+                    </div>
+                </div>
+                <div class="single-blog-post-img">
+                    <img src="./assets/img/misc/impact.png" alt="">
+                </div>
+                <div class="blog-body">
+                Reading books also helps the development of cognitive skills. People who read books from a young age develop higher general intelligence on average than people who read less often. Reading books also helps develop a general world view.
+                </div>
+
+            </div>
+        </div>
+        <!-- // Page Container -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; BookStore 2022</p>
+            </div>
+            <!-- Internal Linking -->
+            <div class="gototop"><a href="#top"><div class="btn">Go To Top</div></a></div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+        /* Internal JS */
+
+        // Cart Element
+        const cart = document.getElementById("cart");
+        const cartOpen = document.getElementById("showcart-btn");
+        const cartClose = document.getElementById("cart-close");
+        // Cart Open
+        function showcart() {
+            cart.classList.remove("hide");
+        }
+        cartOpen.addEventListener("click", showcart);
+
+        // Cart Close
+        function closecart() {
+            cart.classList.add("hide");
+        }
+        cartClose.addEventListener("click", closecart);
+    </script>
+</body>
+</html>

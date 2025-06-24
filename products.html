@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - BookStore</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<style>
+    /* Internal CSS */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    html{
+        scroll-behavior: smooth;            /* Scrolling Smooth */
+    }
+
+    a{
+        text-decoration: none;
+    }
+</style>
+<body>
+    <!-- Header -->
+    <section id="top"></section>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Book<span>Store</span></a>
+        <div class="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        
+        <button class="cart-btn btn" id="showcart-btn">
+            Cart
+        </button>
+    </nav>
+
+    <div id="cart" class="cart-popup hide">         <!-- Inline CSS -->
+        <div class="cart-popup-content">
+            <div class="cart-popup-header">
+                <h3>Cart</h3>
+                <button class="btn" id="cart-close" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-popup-body">
+                <div class="cart-popup-body-content">
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/kafka on the shore.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>Kafka on the shore</h4>
+                            <p>$5.00</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-popup-body-content-item">
+                        <div class="cart-popup-body-content-item-img">
+                            <img src="./assets/img/norwegian wood.jpg" alt="">
+                        </div>
+                        <div class="cart-popup-body-content-item-info">
+                            <h4>Norwegian wood</h4>
+                            <p>$4.00</p>
+                        </div>
+                        <div class="cart-popup-body-content-item-delete">
+                            <button class="btn" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Main -->
+    <main>
+        <!-- // Page Container-->
+        <div class="page-container">
+            <!-- // Page Content -->
+            <div class="page-content">
+                <!-- // Page Content Header -->
+                <div class="page-content-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Products</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Page Content Header -->
+
+                <!-- // Page Content Body -->
+                <div class="page-content-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="product-grid">
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/summer love.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Summer love</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/Sputnik sweetheart.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Sputnik Sweetheart</h4>
+                                            <p>$15</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/The phycology of money.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>The phycology of money</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/Rich dad poor dad.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Rich dad poor dad</h4>
+                                            <p>$8</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/Aghast.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Aghast</h4>
+                                            <p>$9</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/palpasa cafe.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>palpasa cafe</h4>
+                                            <p>$8</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/The women in cabin 10.png" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>The women in cabin 10</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/koriyana cofee guff.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>Koreyiana cofee guff</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/The silent killer.webp" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>The Silent Killer</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/the couple next door.jfif" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>The couple next door</h4>
+                                            <p>$8</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/And then there were none.jfif" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>And then there were None</h4>
+                                            <p>$10</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product-grid-item">
+                                        <div class="product-grid-item-img">
+                                            <img src="./assets/img/The dairy of a young girl.jpg" alt="">
+                                        </div>
+                                        <div class="product-grid-item-info">
+                                            <h4>The dairy of young girl</h4>
+                                            <p>$8</p>
+                                        </div>
+                                        <div class="product-grid-item-add">
+                                            <button class="btn-buy" type="button">
+                                                Add to Cart
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Load More -->
+                            <div class="load-more">
+                                <button class="btn-load-more" type="button"  id="more-products">
+                                    Load More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Page Content Body -->
+            </div>
+            <!-- // Page Content -->
+        </div>
+        <!-- // Page Container -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; BookStore 2022</p>
+            </div>
+            <!-- Internal Linking -->
+            <div class="gototop"><a href="#top"><div class="btn">Go To Top</div></a></div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+        /* Internal JS */
+
+        // Cart Element
+        const cart = document.getElementById("cart");
+        const cartOpen = document.getElementById("showcart-btn");
+        const cartClose = document.getElementById("cart-close");
+        // Cart Open
+        function showcart() {
+            cart.classList.remove("hide");
+        }
+        cartOpen.addEventListener("click", showcart);
+
+        // Cart Close
+        function closecart() {
+            cart.classList.add("hide");
+        }
+        cartClose.addEventListener("click", closecart);
+    </script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
